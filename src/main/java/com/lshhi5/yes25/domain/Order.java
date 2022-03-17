@@ -37,7 +37,7 @@ public class Order {
     @Enumerated(EnumType.STRING)
     private OrderStatus status; //주문상태 [ORDER,CANCEL]
 
-    //==연관관계 편의메소드//
+    //==연관관계 메소드//
 
     public void updateMember(Member member) {
         this.member = member;
@@ -47,6 +47,11 @@ public class Order {
     public void updateDelivery(Delivery delivery) {
         this.delivery = delivery;
         delivery.setOrder(this);
+    }
+
+    public void updateOrderItem(OrderItem orderItem) {
+        orderItems.add(orderItem);
+        orderItem.setOrder(this);
     }
 
 }
