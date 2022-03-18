@@ -39,19 +39,32 @@ public class Order {
 
     //==연관관계 메소드//
 
-    public void updateMember(Member member) {
+    public void addMember(Member member) {
         this.member = member;
         member.getOrders().add(this);
     }
 
-    public void updateDelivery(Delivery delivery) {
+    public void addDelivery(Delivery delivery) {
         this.delivery = delivery;
         delivery.setOrder(this);
     }
 
-    public void updateOrderItem(OrderItem orderItem) {
+    public void addOrderItem(OrderItem orderItem) {
         orderItems.add(orderItem);
         orderItem.setOrder(this);
     }
+
+    //==생성 메서드==//
+
+
+    //==비즈니스 로직==//
+    /**
+     * 주문 취소
+     */
+
+    //==조회 로직==//
+    /**
+     * 전체 주문 가격 조회
+     */
 
 }

@@ -30,4 +30,14 @@ public class OrderItem {
 
     private int orderPrice; //주문 가격
     private int count; //주문 수량
+
+    //==생성 메소드==//
+
+    //==비즈니스 로직==//
+
+    //==조회 로직==//
+
+    /**
+     * 주문 상품 전체 가격 조회
+     */
 }
